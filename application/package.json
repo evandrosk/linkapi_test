@@ -1,0 +1,50 @@
+{
+  "name": "linkapi-integration",
+  "version": "1.0.0",
+  "description": "API para integração",
+  "keywords": [
+    "api",
+    "rest",
+    "integration"
+  ],
+  "scripts": {
+    "start": "node app.js",
+    "lint": "eslint-ci .",
+    "dev": "nodemon app.js"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-ci": "^1.0.0",
+    "eslint-plugin-hapi": "^4.1.0",
+    "grunt": "^0.4.5",
+    "grunt-concurrent": "^3.0.0",
+    "grunt-nodemon": "^0.4.2",
+    "grunt-open": "^0.2.4",
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "bunyan": "^1.8.12",
+    "config": "^3.2.4",
+    "cron": "^1.8.2",
+    "crypto": "^1.0.1",
+    "iconv-lite": "^0.5.0",
+    "ip-range-check": "^0.2.0",
+    "json2xml": "^0.1.3",
+    "jsonwebtoken": "^8.5.1",
+    "moment-timezone": "^0.5.31",
+    "mongodb": "^3.4.1",
+    "mssql": "^6.1.0",
+    "node-fetch": "^2.6.0",
+    "nodemailer": "^6.4.2",
+    "promise": "^8.0.3",
+    "redis": "^2.8.0",
+    "request-promise": "^4.2.5",
+    "request-promise-native": "^1.0.8",
+    "require-all": "2.2.0",
+    "require-dir": "^1.2.0",
+    "restify": "^6.3.4",
+    "restify-router": "^0.5.0",
+    "soap": "^0.30.0"
+  }
+}
