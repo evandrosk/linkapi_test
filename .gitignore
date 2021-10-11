@@ -1,2 +1,2 @@
-!**/.gitkeep
 mongo.data/*
+!mongo.data/.gitkeep
