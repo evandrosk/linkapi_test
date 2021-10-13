@@ -21,20 +21,10 @@ Sob o IP **172.1.0.2** com a(s) porta(s) exposta(s): 27017
 sudo docker-compose up mongodb
 ``
 
-## Redis
-
-O redis é criado em branco, pois sua estrutura é modelada pelo sistema.
-Sob o IP **172.1.0.3** com a(s) porta(s) exposta(s): 6379
-
-* Sua execução (individual):
-``
-sudo docker-compose up redis
-``
-
 ## Node.JS (application)
 
 Serviço em node.js ref. a nova API backend.
-Sob o IP **172.1.0.4** com a(s) porta(s) exposta(s): 3000
+Sob o IP **172.1.0.3** com a(s) porta(s) exposta(s): 3000
 
 * Sua execução (individual):
 ``
@@ -48,11 +38,15 @@ sudo docker exec -it application bash
 
 ### Dependências
 * MongoDB
-* Redis
 
 
 # Chamadas
 
-## Obter ordens a sincronizar no PipeDrive
 ## Executar sincronia do PipeDrive para Bling
-## Verificar ordens sincronizadas com Bling
+
+Basta alterar o ID pelo id do 
+```
+curl --request GET \
+  --url http://127.0.0.1:3000/pipedrive/syncOrderBling/ID \
+  --header 'x-api-key: DEMO'
+```

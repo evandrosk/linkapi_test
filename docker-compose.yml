@@ -13,16 +13,6 @@ services:
             default:
                 ipv4_address: 172.1.0.2
 
-    redis:
-        image: redis
-        container_name: redis
-        restart: always
-        ports:
-            - 6379:6379
-        networks:
-            default:
-                ipv4_address: 172.1.0.3
-
     application:
         build:
             context: ./application
@@ -38,14 +28,12 @@ services:
         volumes:
             - ./application:/var/node
         depends_on:
-            - redis
             - mongodb
         links:
-            - redis
             - mongodb
         networks:
             default:
-                ipv4_address: 172.1.0.4
+                ipv4_address: 172.1.0.3
 
 volumes:
     mysql-data:
